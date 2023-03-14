@@ -1,0 +1,169 @@
+*{
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+#wrap{
+    width: 100%;
+}
+header{
+    width: 100%;
+    height:  50px;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    box-shadow: 2px 10px 10px #ddd;
+    z-index: 1;
+    background-color: #fff;
+}
+.header{
+    width: 1280px;
+    height: 100%;
+    position: relative;
+}
+.nav{
+    width: 500px;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+}
+.nav ul{
+    display: flex;
+    line-height: 50px;
+    font-size: 18px;
+}
+.content{
+    margin: 0 auto;
+    width: 1280px;
+    position: relative;
+}
+.main{
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.main_img{
+    width: 500px;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.main_img>img{
+    height: 100%;
+}
+.main_text{
+    position: absolute;
+    left: 80px;
+    top: 200px;
+    width: 400px;
+    height: 100px;
+    background-color: #ddd;
+    border-radius: 30px;
+}
+.typing{
+    margin-left: 10px;
+    width: 95%;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    font-size: 4em;
+    font-weight: bold;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+.main_text2{
+    position: absolute;
+    width: 510px;
+    height: 50px;
+    right: 0px;
+    top: 450px;
+    background-color: #eae7ee;
+    border-radius: 20px;
+}
+.typing2{
+    margin-left: 20px;
+    font-size: 2em;
+    width: 93%;
+    font-weight: bold;
+    color: #696969;
+    animation: typing1 3s steps(22), blink .5s step-end infinite alternate;
+}
+@keyframes typing1 {
+    0%{
+        opacity: 0;
+        width: 0;
+    }
+    40%{
+        width: 0;
+    }
+
+  }
+
+.about{
+    width: 100%;
+}
+.title{
+    font-size: 28px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 150px;
+    text-align: center;
+    color: #1a1a1a;
+}
+.about_box{
+    margin-top: 100px;
+    width: 100%;
+    height: 350px;
+
+}
+.profile_img{
+    width: 350px;
+    height: 350px;
+    margin-left: 20px;
+    border: 1px solid #000;
+    float: left;
+}
+.profile_text{
+    width:790px;
+    height: 200px;
+    margin-left: 70px;
+    margin-top: 75px;
+    float: left;
+}
+.profile_text>div{
+    width: 250px;
+    height: 100%;
+    background-color: #ddd;
+    float: left;
+}
+.profile_text>div:not(:last-child){
+    margin-right: 20px;
+}
+.profile_title{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-left: 20px;
+    color: #fff;
+}
+.web_box{
+    margin-top: 100px;
+    width: 100%;
+}
