@@ -11,6 +11,8 @@ a{
 }
 #wrap{
     width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 header{
     width: 100%;
@@ -151,7 +153,8 @@ header{
 .profile_text>div{
     width: 250px;
     height: 100%;
-    background-color: #ddd;
+    background-color: #efefef;
+    border-radius: 30px 30px 30px 0px;
     float: left;
 }
 .profile_text>div:not(:last-child){
@@ -161,9 +164,232 @@ header{
     font-size: 18px;
     padding-top: 10px;
     padding-left: 20px;
-    color: #fff;
+    color: #696969;
+    font-weight: bold;
 }
+.profile_listbox{
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.profile_listbox ul:first-child{
+    width: 70px;
+    color: #5c3b89;
+    font-size: 16px;
+    line-height: 24px;
+    float: left;
+
+}
+.profile_listbox ul:nth-child(2){
+    float: left;
+    width: 150px;
+    color: #696969;
+    font-size: 14px;
+    line-height: 24px;
+}
+.edu_listbox ul:first-child{
+    width: 50px;
+}
+.edu_listbox ul:nth-child(2){
+    width: 170px;
+}
+.edu_listbox ul:first-child li{
+    height: 48px;
+}
+/* 스킬 */
+.skill_listbox ul:first-child{
+    width: 110px;
+}
+.skill_box{
+    width: 100px !important;
+}
+.skill_box li{
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+    position: relative;
+}
+.skill_box li>div{
+    height: 5px;
+    margin-left: 0px;
+    background-color: #5c3b89;
+    animation: goleft 1s;
+}
+@keyframes goleft{
+    from{
+        width: 0;
+    }
+}
+.skill_box li:first-child div,
+.skill_box li:nth-child(2) div
+{
+    width: 80%;
+}
+.skill_box li:nth-child(3) div
+{
+    width: 65%;
+}
+.skill_box li:nth-child(4) div,
+.skill_box li:nth-child(5) div
+{
+    width: 40%;
+}
+
+/* 스킬종료 */
+.profile_listbox::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* 포트폴리오 시작 */ 
 .web_box{
     margin-top: 100px;
     width: 100%;
+    height: 500px;
 }
+.web_text{
+    width: 530px;
+    height: 70%;
+    margin-top: 5%;
+    float: left;
+    border-left: 2px solid #5c3b89;
+}
+.web_title{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+}
+.web_text table{
+    padding-left: 20px;
+    padding-top: 20px;
+    margin-left: 0;
+    height:120px;
+    color: #696969;
+}
+
+.web_text table tr td:first-child{
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    width: 120px;
+    font-weight: bold;
+}
+.web_text table tr td:nth-child(2){
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.web_ment{
+    width: 90%;
+    height: 100px;
+    margin-left: 0px;
+    margin-top: 30px;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #696969;
+}
+.web_img{
+    float: left;
+    margin-left: 20px;
+    width: 700px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.web_img a>img{
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+.hover_event{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.3;
+    
+}
+.web_img a:hover .hover_event{
+    display: block;
+    transition: 0.7s;
+}
+.web_box::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+.web_text_right{
+    margin-left: 20px;
+    width: 500px;
+    border-left: none;
+    border-top: 2px solid #5c3b89;
+}
+
+/* 그래픽 시작 */
+.graphic{
+    position: relative;
+}
+.graphic_box{
+    margin-top: 100px;
+    width: 100%;
+    height: fit-content;
+}
+/* 제이쿼리 소스 복사 */
+.imgal-container{
+    line-height:0;
+    -webkit-column-count:4;
+    -webkit-column-gap:0;
+    -moz-column-count:4;
+    -moz-column-gap:0;
+    column-count:4;
+    column-gap:0;
+}
+.imgal-img{
+    width:100%;
+    height:auto;
+    transition:filter .2s;
+}
+.imgal-img:hover{
+    -webkit-filter:opacity(80%);
+    filter:opacity(80%);
+    cursor:pointer;
+}
+.imgal-modal{
+    margin:auto;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(0,0,0,0.1);
+    color:#fff;
+    vertical-align:middle;
+    height:100%;
+    width:100%;
+    z-index: 1;
+    overflow: hidden;
+    margin: 0 auto;
+    text-align: center;
+}
+.imgal-modal-img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    cursor: pointer;
+}
+@media only screen and (min-width:1200px){
+    .imgal-container{
+        line-height:0;
+        -webkit-column-count:4;
+        -webkit-column-gap:0;
+        -moz-column-count:4;
+        -moz-column-gap:0;
+        column-count:4;
+        column-gap:0;
+    }
+}
+/* 복사종료 */
