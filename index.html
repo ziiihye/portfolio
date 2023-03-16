@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
 </head>
 <body>
     <div class="wrap">
@@ -22,10 +23,11 @@
                 </div>
                 <div class="nav">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Graphic</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" id="home">Home</a></li>
+                        <li><a href="#" id="about">About</a></li>
+                        <li><a href="#" id="portfolio">Portfolio</a></li>
+                        <li><a href="#" id="graphic">Graphic</a></li>
+                        <li><a href="#" id="contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -47,6 +49,7 @@
             <!-- about시작 -->
             <section class="about">
                 <p class="title">About</p>
+                <div class="profile_m_img"></div>
                 <div class="about_box">
                     <div class="profile_img"></div>
                     <div class="profile_text">
@@ -110,7 +113,7 @@
                 </div>
             </section>
             <!-- 포트폴리오시작  -->
-            <section class="about">
+            <section class="about portfolio">
                 <p class="title">Web Portfolio</p>
                 <!-- 경남제약프로젝트 -->
                 <div class="web_box">
@@ -136,23 +139,21 @@
                             </tr>
                         </table>
                         <div class="web_ment">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores commodi expedita facilis facere ut, pariatur id distinctio sint possimus amet voluptatem soluta, placeat temporibus consequatur exercitationem iure culpa magni cumque?
-                        </div>
+                            경남제약 메인 페이지를 클론 코딩하였습니다. Jquery와 animation 사용하여 기존 홈페이지의 부드럽고 동적인 페이지를 만들었습니다.                        </div>
                     </div>
                     <div class="web_img">
                         <a href="https://ziiihye.github.io/kyungnam/" target="_blank">
-                            <img src="img/kyungnam-mockup.jpg">
-                            <div class="hover_event"></div>
+                            <img src="img/kyungnam-mockup.jpg" class="imgs">
                         </a>
                     </div>
                 </div>
                 <!-- 무지 프로젝트 -->
-                <div class="web_box">
+                <div class="web_box web_box2">
                     <div class="web_img">
                         <a href="https://ziiihye.github.io/muji/" target="_blank">
-                            <img src="img/muji-notebook-mockup.jpg">
-                            <img src="img/muji-desktop-mockup.jpg">
-                            <div class="hover_event"></div>
+                            <img src="img/muji-notebook-mockup.jpg" class="imgs">
+                            <img src="img/muji-desktop-mockup.jpg" class="imgs">
+                            <img src="img/muji-phone-mockup.jpg" class="imgs">
                         </a>
                     </div>
                     <div class="web_text web_text_right">
@@ -177,8 +178,7 @@
                             </tr>
                         </table>
                         <div class="web_ment">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores commodi expedita facilis facere ut, pariatur id distinctio sint possimus amet voluptatem soluta, placeat temporibus consequatur exercitationem iure culpa magni cumque?
-                        </div>
+                            무지 메인 홈페이지를 확장된 스타일로 리뉴얼 해보았습니다. 미디어 쿼리를 사용하여 노트북과 휴대폰 사이즈 반응형 페이지를 구축하였습니다. Jquery, slick-slider를 사용했습니다.                        </div>
                     </div>
                 </div>
             </section>
@@ -202,12 +202,57 @@
             <!-- 콘택트 시작 -->
             <section class="about">
                 <p class="title">Contact</p>
-                <div class="contact_box"></div>
+                <div class="contact_box">
+                    <ul>
+                        <li>
+                            <a href="mailto:ziiihye@gmail.com" class="icon">
+                                <div class="icon_img"><img src="img/mail.png"></div>
+                                <p>Mail</p>
+                            </a>
+                            <div class="contact_text_box">
+                                <p>여러분의 연락을 언제든지 기다리고 있겠습니다.</p>
+                                <p><a href="mailto:ziiihye@gmail.com">ziiihye@gmail.com</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="https://ziiihye.cafe24.com" target="_blank" class="icon">
+                                <div class="icon_img"><img src="img/blog.png"></div>
+                                <p>Blog</p>
+                            </a>
+                            <div class="contact_text_box">
+                                <p>퍼블리셔 공부 초창기에 만든 개인 블로그입니다.</p>
+                                <p><a href="https://ziiihye.cafe24.com" target="_blank">ziiihye.cafe24.com</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="tel:010-5342-1245" class="icon">
+                                <div class="icon_img"><img src="img/phone.png"></div>
+                                <p>Phone</p>
+                            </a>
+                            <div class="contact_text_box">
+                                <p>스팸은 안되요. 큰 마음 먹고 알려드리는 번호입니다.</p>
+                                <p><a href="tel:010-5342-1245">010-5342-1245</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </div>
+        <!-- 푸터시작 -->
+        <footer>
+            <div class="footer">
+                Thanks for visiting my Website.<br>
+                Copyright ⓒ 2023. Lee JiHye All rights reserved.
+            </div>
+        </footer>
     </div>
         <!-- 자바스크립트 -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
         <script src="javascript/imgal.js"></script>
+        <script src="javascript/script.js"></script>
+        <!-- slick 라이브러리 -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
 </body>
 </html>
