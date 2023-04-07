@@ -146,6 +146,9 @@ header{
     border: 1px solid #000;
     float: left;
 }
+.profile_img>img{
+    width: 100%;
+}
 .profile_text{
     width:790px;
     height: 200px;
